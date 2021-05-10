@@ -421,9 +421,19 @@ button.portfolio:focus {
 }
 .section-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer-item {
+  display: block;
+  flex-basis: calc((50% - 45px) / 2);
+}
+.subscribe {
+  display: block;
+  flex-basis: calc(50% - 15px);
+  justify-content: end;
 }
 .contact-section-footer .item:not(:last-child) {
   margin-bottom: 9px;
@@ -615,6 +625,11 @@ button.portfolio:focus {
   width: 18px;
   height: 18px;
   fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button-icon:hover,
+.close-button-icon:focus {
+  fill: var(--accent-text-color);
 }
 .is-hidden {
   opacity: 0;
@@ -633,6 +648,12 @@ button.portfolio:focus {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
 }
 .modal-form-input {
   outline: none;
@@ -668,6 +689,7 @@ button.portfolio:focus {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  margin-bottom: 20px;
 }
 .contact-form-message:focus {
   outline: none;
@@ -698,11 +720,27 @@ button.portfolio:focus {
 .modal-form-term-desc {
   position: relative;
   width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--primary-text-color);
+}
+/* .modal-form-term-desc::before { */
+/* display: inline-block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+} */
+
+.modal-form-term-link {
+  color: var(--accent-text-color);
 }
 .checkbox {
   position: absolute;
   top: 0;
   left: 0;
-  width: 16px;
-  height: 15px;
+}
+.modal-form-term:checked + .modal-form-term-desc + .checkbox {
+  fill: var(--accent-text-color);
+  background-color: var(--accent-text-color);
 }

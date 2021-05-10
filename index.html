@@ -359,7 +359,7 @@
   <footer class="footer">
     <div class="container">
       <div class="section-footer">
-        <div>
+        <div class="footer-item">
           <div class="footer-logo-container">
             <a lang="en" href="/" class="logo footer"><span class="colortext">Web</span>Studio</a>
           </div>
@@ -378,7 +378,7 @@
           </div>
         </div>
         <div>
-          <div class="advantages">
+          <div class="advantages footer-item">
             <h3 class="features-title light-text advant-title">Присоединяйтесь</h3>
             <ul class="social-list list">
               <li class="social-list-item">
@@ -441,7 +441,7 @@
       <form action="#" class="modal-form">
 
         <p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
-        <label> Имя
+        <label class="modal-label"> Имя
 
           <span class="modal-form-input-wrapper">
             <input class="modal-form-input" type="text" name="Name" class="modal-form-input" required>
@@ -451,7 +451,7 @@
           </span>
 
         </label>
-        <label> Телефон
+        <label class="modal-label"> Телефон
           <span class="modal-form-input-wrapper">
             <input class="modal-form-input" type="tel" name="tel" class="modal-form-input" required>
             <svg class="modal-form-icon">
@@ -460,7 +460,7 @@
           </span>
 
         </label>
-        <label> Почта
+        <label class="modal-label"> Почта
           <span class="modal-form-input-wrapper">
             <input class="modal-form-input" type="email" name="email" class="modal-form-input" required>
             <svg class="modal-form-icon">
@@ -469,12 +469,12 @@
           </span>
 
         </label>
-        <label>
+        <label class="modal-label">
           Комментарий
           <textarea class="contact-form-message" name="feedback" placeholder="Введите текст"></textarea>
         </label>
-        <input type="checkbox" name="policy" class="modal-form-term">
-        <label for="" class="modal-form-term-desc">
+        <input id="checkbox" type="checkbox" name="policy" class="modal-form-term">
+        <label for="checkbox" class="modal-form-term-desc">
           <svg class="modal-form-icon checkbox">
             <use href="./images/sprite.svg#check-square"></use>
           </svg>
