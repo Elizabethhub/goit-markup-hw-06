@@ -377,41 +377,41 @@
             </ul>
           </div>
         </div>
-        <div>
-          <div class="advantages footer-item">
-            <h3 class="features-title light-text advant-title">Присоединяйтесь</h3>
-            <ul class="social-list list">
-              <li class="social-list-item">
-                <a href="#" class="social-list-item-link dark">
-                  <svg class="social-list-icon dark-mode">
-                    <use href="./images/sprite.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list-item">
-                <a href="#" class="social-list-item-link dark">
-                  <svg class="social-list-icon dark-mode">
-                    <use href="./images/sprite.svg#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list-item">
-                <a href="#" class="social-list-item-link dark">
-                  <svg class="social-list-icon dark-mode">
-                    <use href="./images/sprite.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list-item">
-                <a href="#" class="social-list-item-link dark">
-                  <svg class="social-list-icon dark-mode">
-                    <use href="./images/sprite.svg#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+
+        <div class="advantages footer-item">
+          <h3 class="features-title light-text advant-title">Присоединяйтесь</h3>
+          <ul class="social-list list">
+            <li class="social-list-item">
+              <a href="#" class="social-list-item-link dark">
+                <svg class="social-list-icon dark-mode">
+                  <use href="./images/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a href="#" class="social-list-item-link dark">
+                <svg class="social-list-icon dark-mode">
+                  <use href="./images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a href="#" class="social-list-item-link dark">
+                <svg class="social-list-icon dark-mode">
+                  <use href="./images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a href="#" class="social-list-item-link dark">
+                <svg class="social-list-icon dark-mode">
+                  <use href="./images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
+
         <div class="subscribe">
           <h3 class="features-title light-text subscribe-title">Подпишитесь на рассылку</h3>
           <form action="#" class="subscribe-form">
@@ -473,14 +473,16 @@
           Комментарий
           <textarea class="contact-form-message" name="feedback" placeholder="Введите текст"></textarea>
         </label>
-        <input id="checkbox" type="checkbox" name="policy" class="modal-form-term">
-        <label for="checkbox" class="modal-form-term-desc">
-          <svg class="modal-form-icon checkbox">
-            <use href="./images/sprite.svg#check-square"></use>
-          </svg>
-          Соглашаюсь с рассылкой и принимаю <a class="modal-form-term-link" href="">Условия договора</a>
+        <input id="user-policy" type="checkbox" name="user-policy" class="modal-form-term visually-hidden">
+        <label for="user-policy" class="modal-form-term-desc">Соглашаюсь с рассылкой и принимаю &nbsp;<a
+            class="modal-form-term-link" href="">Условия договора</a>
         </label>
-        <button type="submit" class="button modal-form-submit">Отправить</button>
+
+        <button type="submit" class="button modal-form-submit">Отправить
+          <!-- <svg class="modal-form-icon">
+            <use href="./images/sprite.svg#check-mark"></use>
+          </svg> -->
+        </button>
 
 
       </form>

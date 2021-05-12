@@ -434,16 +434,18 @@ button.portfolio:focus {
   display: block;
   flex-basis: calc(50% - 15px);
   justify-content: end;
+  margin-left: 30px;
 }
 .contact-section-footer .item:not(:last-child) {
   margin-bottom: 9px;
 }
 .advantages {
-  margin-left: 70px;
+  margin-left: 30px;
 }
 .subscribe-form {
-  width: 570px;
-  min-height: 86px;
+  display: flex;
+  align-items: center;
+  flex: start;
 }
 .subscribe-form-input {
   width: 358px;
@@ -471,6 +473,7 @@ button.portfolio:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10px;
 }
 .footer-tlg-icon {
   fill: var(--footer-text-color);
@@ -662,7 +665,7 @@ button.portfolio:focus {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   padding-left: 42px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -710,6 +713,7 @@ button.portfolio:focus {
   fill: var(--title-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-form-input:focus + .modal-form-icon {
   fill: var(--accent-text-color);
 }
@@ -718,29 +722,49 @@ button.portfolio:focus {
   position: relative;
 }
 .modal-form-term-desc {
-  position: relative;
-  width: 100%;
+  display: flex;
+  align-items: center;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   color: var(--primary-text-color);
 }
-/* .modal-form-term-desc::before { */
-/* display: inline-block;
+.modal-form-term-desc::before {
+  display: inline-block;
   content: "";
   width: 16px;
   height: 15px;
+  outline: 1px solid #000000;
   margin-right: 7px;
-} */
+  cursor: pointer;
+  border-radius: 2px;
+  border: 2px solid #212121;
+  outline: none;
+}
 
 .modal-form-term-link {
   color: var(--accent-text-color);
 }
-.checkbox {
-  position: absolute;
-  top: 0;
-  left: 0;
+
+.modal-form-term:checked + .modal-form-term-desc::before {
+  /* fill: var(--accent-text-color); */
+  /* background-color: var(--accent-text-color); */
+  border: none;
+  background-image: url("../images/sprite.svg#check-mark");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.modal-form-term:checked + .modal-form-term-desc + .checkbox {
-  fill: var(--accent-text-color);
-  background-color: var(--accent-text-color);
+
+.modal-form-term:focus + .modal-form-term-desc::before {
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
